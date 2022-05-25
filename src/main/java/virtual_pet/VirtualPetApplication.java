@@ -20,18 +20,19 @@ public class VirtualPetApplication {
         while (userPet.getHungerLevel() != 10 || userPet.getThirstLevel() != 10 || userPet.getBoredomLevel() != 10) {
             boolean petAlive = true;
             userPet.virtualPetUpdate();
-//            userPet.VirtualPetEmotion();
+            userPet.VirtualPetEmotion();
             System.out.println("What would you like to do with your Virtual Pet?");
             String command = input.nextLine();
             if (command.equals("feedPet") && userPet.getHungerLevel() > 0) {
                 userPet.feedPet();
             }
-            if (command.equals("givePetWater") && userPet.getThirstLevel() > 0) {
+            else if (command.equals("givePetWater") && userPet.getThirstLevel() > 0) {
                 userPet.givePetWater();
             }
-            if (command.equals("playWithPet") && userPet.getBoredomLevel() > 0) {
+            else if (command.equals("playWithPet") && userPet.getBoredomLevel() > 0) {
                 userPet.playWithPet();
-            } else {
+            }
+            else {
                 System.out.println("Please re-type your command or type help for a guide.");
             }
             userPet.tick();

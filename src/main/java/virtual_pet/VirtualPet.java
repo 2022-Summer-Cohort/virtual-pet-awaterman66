@@ -41,7 +41,7 @@ public class VirtualPet {
         else{
             boredomLevel++;
         }
-//        System.out.println("ヽ(^o^)ノ");
+        System.out.println("ヽ(^o^)ノ");
     }
 
     public void givePetWater() {
@@ -56,7 +56,7 @@ public class VirtualPet {
         else{
             boredomLevel++;
         }
-//        System.out.println("ヽ(^o^)ノ");
+        System.out.println("ヽ(^o^)ノ");
     }
 
     public void playWithPet() {
@@ -74,7 +74,7 @@ public class VirtualPet {
             hungerLevel++;
             thirstLevel++;
         }
-//        System.out.println("ヽ(^o^)ノ");
+        System.out.println("ヽ(^o^)ノ");
     }
 
     public void tick() {
@@ -88,25 +88,23 @@ public class VirtualPet {
         System.out.println(name + "'s Thirst Level: " + thirstLevel);
         System.out.println(name + "'s Boredom Level: " + boredomLevel);
     }
+
+    public void VirtualPetEmotion() {
+        if (hungerLevel >= 7 && thirstLevel >= 7) {
+            System.out.printf("(╬ ಠ益ಠ)");
+        } else if (hungerLevel >= 7 && thirstLevel <= 5) {
+            System.out.println("ಠ_ಠ");
+        } else if (thirstLevel >= 7 && hungerLevel <= 5) {
+            System.out.println("(・_・;)");
+        } else if (boredomLevel >= 7) {
+            System.out.println("(-_-) zzz");
+        } else {
+            System.out.println("ヽ(•‿•)ノ");
+        }
+    }
 }
 
-//    public void VirtualPetEmotion() {
-//        if (hungerLevel >= 7 && thirstLevel >= 7) {
-//            System.out.printf("(╬ ಠ益ಠ)");
-//        }
-//        else if (hungerLevel >= 7 && thirstLevel <= 5) {
-//            System.out.println("ಠ_ಠ");
-//        }
-//        else if (thirstLevel >= 7 && hungerLevel <=5 ) {
-//            System.out.println("(・_・;)");
-//        }
-//        else if (boredomLevel >= 7 ) {
-//            System.out.println("(-_-) zzz");
-//        }
-//        else {
-//            System.out.println("ヽ(•‿•)ノ");
-//        }
-//    }
+
 
 
 
