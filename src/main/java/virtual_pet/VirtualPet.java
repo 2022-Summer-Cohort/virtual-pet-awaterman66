@@ -82,6 +82,16 @@ public class VirtualPet {
         thirstLevel++;
         boredomLevel++;
     }
+    public void greetUser(){
+        System.out.println("Your Virtual Pet's name is: " + name);
+        System.out.println("If your Virtual Pet's hunger, thirst, or boredom levels gets to 20, Your Pet is dead.");
+        System.out.println("(X_X)");
+        System.out.println("You can feed your pet to raise it's hunger level by typing: feed.");
+        System.out.println("You can give your pet water by typing: water.");
+        System.out.println("You can play with your get by typing: play.");
+        System.out.println("But be careful, playing with your pet will raise hunger and thirst levels!");
+        System.out.println("Have fun!");
+    }
 
     public void virtualPetUpdate() {
         System.out.println(name + "'s hunger level: " + hungerLevel);
@@ -90,13 +100,13 @@ public class VirtualPet {
     }
 
     public void VirtualPetEmotion() {
-        if (hungerLevel >= 7 && thirstLevel >= 7) {
-            System.out.printf("(╬ ಠ益ಠ)");
-        } else if (hungerLevel >= 7 && thirstLevel <= 5) {
+        if (hungerLevel >= 13 && thirstLevel >= 13) {
+            System.out.println("(╬ ಠ益ಠ)");
+        } else if (hungerLevel >= 13 && thirstLevel <= 10) {
             System.out.println("ಠ_ಠ");
-        } else if (thirstLevel >= 7 && hungerLevel <= 5) {
+        } else if (thirstLevel >= 13 && hungerLevel <= 10) {
             System.out.println("(・_・;)");
-        } else if (boredomLevel >= 7) {
+        } else if (boredomLevel >= 10) {
             System.out.println("(-_-) zzz");
         } else {
             System.out.println("ヽ(•‿•)ノ");
